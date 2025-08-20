@@ -1,0 +1,84 @@
+.orders-container {
+  width: 100%; /* Use 100% of the parent's width */
+  height: 100vh; /* Ensure it fits within the height of the viewport */
+  max-width: 100vw; /* Prevent the container from exceeding the viewport width */
+  max-height: 100vh; /* Prevent the container from exceeding the viewport height */
+  padding: 20px;
+  background-color: #ff8c00; /* Orange background */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent overflow */
+  color: white; /* Set text color to white */
+  transition: all 0.3s ease; /* Smooth transition for layout changes */
+}
+
+.table-wrapper {
+  flex: 1;
+  overflow: auto;
+  background-color: black; /* Black background for the table wrapper */
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.1);
+  max-height: calc(100vh - 40px); /* Ensure it doesn't exceed the container height minus padding */
+}
+
+.orders-table {
+  width: 100%;
+  min-width: 1400px;
+  border-collapse: collapse;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  color: white; /* White text in the table */
+  user-select: text;
+}
+
+.orders-table thead {
+  position: sticky;
+  top: 0;
+  background-color: #333; /* Dark background for table header */
+  z-index: 10;
+  border-bottom: 1px solid #444;
+}
+
+.orders-table th {
+  font-weight: 500;
+  text-align: left;
+  padding: 10px;
+  border-right: 1px solid #555; /* Slightly darker border */
+  border-bottom: 1px solid #555;
+  white-space: nowrap;
+}
+
+.orders-table td {
+  padding: 10px;
+  border-right: 1px solid #555;
+  border-bottom: 1px solid #555;
+  white-space: nowrap;
+  background-color: #222; /* Dark background for table data */
+  transition: background-color 0.2s ease;
+}
+
+.orders-table tbody tr:hover td {
+  background-color: #ff8c00; /* Highlight row with orange on hover */
+}
+
+.orders-table td:focus {
+  outline: 2px solid #4285f4;
+  background-color: #ff8c00; /* Orange focus */
+}
+
+/* Scrollbars */
+.table-wrapper::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background: #333; /* Dark scrollbar track */
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ff8c00; /* Orange scrollbar thumb */
+  border-radius: 10px;
+}

@@ -1,0 +1,108 @@
+.OrkenWorld-container {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  width: 100%;
+  min-height: 150vh;
+  background-color: black;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.OrkenWorld-container::-webkit-scrollbar {
+  display: none;
+}
+
+.OrkenWorld-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.OrkenWorld-sticky {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.OrkenWorld-cards {
+  padding-left:  140px;
+  padding-right: 340px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 4;
+  gap: 130px;
+}
+
+.OrkenWorld-card {
+  width: 42%;
+  height: 75%;
+  background-color: #222;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  /* border-radius: 20px; */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.OrkenWorld-card:hover {
+  transform: scale(1.05);
+}
+
+.OrkenWorld-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: 20px; */
+}
+
+.card-content {
+  /* border-radius: 20px; */
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1); /* Slightly transparent */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+
+.card-content h3 {
+  font-family: "Orbitron", serif;
+  font-size: 30px;
+  margin: 0;
+}
+
+.card-content p {
+  font-family: "Orbitron", serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+.OrkenWorld-outline-layer,
+.OrkenWorld-fill-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200vw;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.OrkenWorld-fill-layer {
+  z-index: 10;
+}

@@ -1,0 +1,256 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+
+.home-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.canvas-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+
+
+.home-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.home-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.home-logo {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 5;
+}
+
+.home-logo p {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+  background: linear-gradient(135deg, #000000, #777);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav {
+  width: 90%;
+  margin: 10px auto;
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 10;
+}
+
+.home-nav {
+  display: flex;
+  gap: 16px;
+}
+
+.home-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 120px;
+  padding: 12px 20px;
+  font-size: 13px;
+  font-family: "Orbitron", sans-serif;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #000;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 5;
+}
+
+.home-btn-icon {
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33px;
+  height: 33px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 2px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-text {
+  flex: 1;
+  text-align: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.home-btn:hover {
+  background: white;
+  color: #fb7a27;
+  border-color: white;
+}
+
+.home-btn:hover .home-btn-icon {
+  transform: translateX(80px);
+}
+
+.home-btn:hover .btn-text {
+  transform: translateX(-4px);
+  text-align: left;
+}
+
+.home-below {
+  width: 100%;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  margin-top: auto;
+  z-index: 5;
+}
+
+.home-below h1 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 300;
+  font-size: 36px;
+  background: linear-gradient(135deg, #000, #484848);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: default;
+}
+
+#home-footer-animation {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-text-rotating {
+  animation: infiniteScroll 5s linear infinite;
+  transform-origin: center;
+  font-size: 23px;
+}
+
+@keyframes infiniteScroll {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.home-static-arrow text {
+  fill: white;
+  font-size: 32px;
+  font-weight: bold;
+  text-anchor: middle;
+  pointer-events: none;
+  user-select: none;
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@media (max-width: 1200px) {
+  .home-logo p {
+    font-size: 42px;
+  }
+  .home-below h1 {
+    font-size: 36px;
+  }
+  .home-btn {
+    width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-logo p {
+    font-size: 30px;
+  }
+  .home-below h1 {
+    font-size: 20px;
+  }
+  .home-btn {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    overflow: hidden;
+  }
+  .home-below h1 {
+    font-size: 15px;
+  }
+  .home-btn {
+    display: none;
+  }
+  .home-logo p {
+    font-size: 18px;
+  }
+} */
+
+
+.canvas-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

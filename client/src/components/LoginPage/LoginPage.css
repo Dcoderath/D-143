@@ -1,0 +1,131 @@
+/* Login Page Container */
+.login-page-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+/* Login Form Box */
+.login-form {
+  position: relative;
+  background-color: #1f1f1f;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Header with title and close button */
+.login-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.login-form-header h2 {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  font-size: 2.5rem;
+}
+
+/* Close Button (X) */
+.login-close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.login-close-btn:hover {
+  color: #f44336;
+}
+
+/* Login Input Groups */
+.login-input-group {
+  margin-bottom: 15px;
+}
+
+.login-input-group label {
+  font-family: 'Orbitron', sans-serif;
+  display: block;
+  color: #ddd;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.login-input-group input {
+  font-family: 'Orbitron', sans-serif;
+  width: 100%;
+  padding: 12px;
+  background-color: #2a2a2a;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.login-input-group input:focus {
+  
+  background-color: #444;
+  outline: none;
+}
+
+/* Error Message */
+.login-error {
+  font-family: 'Orbitron', sans-serif;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Submit Button */
+.login-submit-btn {
+  font-family: 'Orbitron', sans-serif;
+  width: 100%;
+  padding: 12px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-submit-btn:hover {
+  background-color: #d32f2f;
+}
+
+.login-submit-btn:active {
+  background-color: #c2185b;
+}
+
+/* Toggle Form Link */
+.login-toggle-form {
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  color: #f44336;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-toggle-form:hover {
+  text-decoration: underline;
+}
