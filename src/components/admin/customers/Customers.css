@@ -1,0 +1,72 @@
+/* General container */
+.customer-container {
+  padding: 2rem;
+  background-color: #f1f3f4; /* Light grey background */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.customer-heading {
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Excel-like table structure */
+.customer-table {
+  width: 100%;
+  border-collapse: collapse; /* To collapse borders between cells */
+  margin-top: 20px;
+}
+
+.customer-table th,
+.customer-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.customer-table th {
+  background-color: #e7e7e7;
+  font-weight: bold;
+  color: #555;
+}
+
+.customer-table td {
+  background-color: #fafafa;
+  font-size: 16px;
+  color: #333;
+}
+
+.customer-table td:hover {
+  background-color: #f0f0f0;
+}
+
+
+.customer-logout-btn {
+  padding: 0.5rem 1rem;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.customer-logout-btn:hover {
+  background-color: #c9302c;
+}
+
+/* No user logged in message */
+.customer-no-user {
+  font-size: 16px;
+  color: #666;
+  margin-top: 1rem;
+  text-align: center;
+}

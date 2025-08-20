@@ -1,0 +1,66 @@
+.spiralImg-mainContainer {
+    border-radius: 30px;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.spiralImg-topContainer {
+
+    position: absolute;
+    width: 100%;
+    height: 65%;
+    top: 2vh;
+    left: 0;
+    z-index: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures nothing leaks */
+}
+
+.spiralImg-topImage {
+    width: 55vw;
+    max-width: 1000px;
+    height: auto;
+    object-fit: contain;
+   
+}
+
+.spiralImg-topImage, .spiralImg-baseImage {
+    will-change: transform, opacity;
+    transition: transform 0.3s ease-out;
+}
+
+.spiralImg-bottomContainer {
+  
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden; /* Ensures extra parts don’t show */
+}
+
+.spiralImg-baseImage {
+    width:  90%; /* Covers full width */
+    height: 90%; /* Covers full height */
+    max-width: none;
+    max-height: none;
+    object-fit: contain; /* Ensures it fits without overflow */
+    position: absolute;
+    bottom: 0; /* Sticks to the bottom */
+}
+
+/* Additional Fix: Prevent Unwanted Parts */
+.spiralImg-baseImage img {
+    clip-path: inset(0 0 0 0); /* Ensures only needed parts are visible */
+}

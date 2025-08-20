@@ -1,0 +1,276 @@
+/* Wrapper */
+#wrapper {
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99;
+  perspective: 1000px;
+  transition: height 0.6s ease-in-out;
+}
+
+#wrapper.menu-open {
+  height: 100vh;
+}
+
+/* Blurred edges */
+#wrapper::before,
+#wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 10vh;
+  width: 30vw;
+  background: rgba(3, 3, 3, 0);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  mask-image: radial-gradient(circle at left, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: radial-gradient(circle at right, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
+
+#wrapper::before {
+  left: 0;
+  transform: scaleX(-1);
+}
+
+#wrapper::after {
+  right: 0;
+}
+
+/* Site Title */
+.site-title {
+  position: fixed;
+  top: 1rem;
+  left: 1.8rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+  background: linear-gradient(to right, white 50%, grey 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  z-index: 1001;
+  pointer-events: auto;
+}
+
+/* Toggle Button */
+.navbar-toggle {
+  pointer-events: auto;
+  cursor: pointer;
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  padding: 0;
+  transition: transform 0.4s;
+}
+
+.navbar-toggle .line {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+  transition: all 0.4s ease;
+}
+
+.navbar-toggle .top {
+  stroke-dasharray: 40 139;
+}
+
+.navbar-toggle .bottom {
+  stroke-dasharray: 20 180;
+  stroke-dashoffset: -20px;
+}
+
+.navbar-toggle.active {
+  transform: rotate(45deg);
+}
+
+.navbar-toggle.active .line {
+  stroke: #fff;
+}
+
+.navbar-toggle.active .top {
+  stroke-dashoffset: -98px;
+}
+
+.navbar-toggle.active .bottom {
+  stroke-dashoffset: -138px;
+}
+
+/* Navbar container */
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  visibility: hidden;
+}
+
+.navbar.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Nav list and positioning overrides */
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Base list item animation */
+.navbar li {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  position: absolute;
+}
+
+.navbar.show li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-home {
+  top: 20%;
+  left: 20%;
+  transform: translateY(-50%);
+}
+
+.nav-notebooks {
+  top: 40%;
+  right: 15%;
+  transform: translateY(-50%);
+}
+
+.nav-login {
+  bottom: 20%;
+  left: 20%;
+}
+/* Navigation Link Styles */
+.navbar a {
+  font-family: 'Orbitron', sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Pseudo-element for hover shine */
+.navbar a::before {
+  /* content: attr(data-text); */
+  font-family: 'Orbitron', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+  color: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+
+
+}.user-icon {
+  font-family: 'Orbitron', sans-serif;
+  position: absolute;
+  top: 25px;
+  right: 90px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.user-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+/* Hover Animation */
+.navbar a:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6),
+               0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.navbar a:hover::before {
+  opacity: 0.2;
+}
+
+
+/* Expanding Circle Animation */
+#bg-circle {
+  width: 89px;
+  height: 89px;
+  background: #000;
+  position: fixed;
+  top: 0.7rem;
+  right: 0.7rem;
+  border-radius: 50%;
+  z-index: 97;
+  transform: scale(0.1);
+  pointer-events: none;
+  transition: transform 0.6s ease-in-out, opacity 0.4s ease-in-out;
+}
+.google-login-wrapper {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+#bg-circle.expand {
+  transform: scale(40);
+  opacity: 1;
+}
+
+/* Prevent flash during mount */
+.no-animation * {
+  transition: none !important;
+  animation: none !important;
+  opacity: 0 !important;
+}
+
+#bg-circle.no-animation {
+  transform: scale(0.1) !important;
+  opacity: 0 !important;
+}
