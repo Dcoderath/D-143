@@ -1,0 +1,69 @@
+.signature-legacy-container {
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 130vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #88b7bd00;
+}
+
+.signature-marquee-container {
+   
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 100%;
+  height: 90px;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+
+  left: 0;
+}
+
+.signature-marquee {
+  display: flex;
+  font-size: 70px;
+  font-weight: bold;
+  font-family: "Orbitron", serif;
+  white-space: nowrap;
+  text-transform: uppercase;
+  animation: marquee 22s linear infinite;
+  width: 200%; /* Ensures continuous scrolling */
+}
+
+.signature-marquee span {
+  padding-right: 1rem;
+}
+
+.solid {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.outlined {
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(255, 255, 255);
+}
+
+.trademark {
+  font-size: 50px;
+  position: relative;
+  top: -30px;
+  margin-left: 5px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

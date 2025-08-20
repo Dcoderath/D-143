@@ -1,0 +1,54 @@
+.grid-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  padding: 100px 100px 10px 100px; /* Top, Right, Bottom, Left */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+/* Scrollable wrapper inside fixed container */
+.grid-scroll {
+  overflow-y: auto;
+  max-height: 100%;
+  width: 100%;
+}
+
+/* The actual grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 30px;
+  width: 100%;
+  padding-right: 10px;
+}
+
+/* Grid items */
+.grid-item {
+  position: relative;
+  overflow: hidden;
+ 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.grid-item.large img {
+  transform: scale(1.1);
+}
+
+.grid-item:hover img {
+  transform: scale(1.05);
+}
