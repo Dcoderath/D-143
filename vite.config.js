@@ -1,8 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/notyra/", // repo name here
+  base: "/D-143/", // 👈 repo name here
 });
